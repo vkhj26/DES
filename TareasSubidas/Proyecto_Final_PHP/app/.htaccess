@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Permitir acceso a las imágenes específicas en /php/ProyectoFinal/app/uploads/
+
+    RewriteCond %{REQUEST_URI} ^/php/ProyectoFinal/app/uploads/\d{8}\.jpg$
+    RewriteRule ^.*$ - [L]
+
+</IfModule>
